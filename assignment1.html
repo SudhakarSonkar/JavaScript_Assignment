@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <h3 id="head">Personal Information</h3>
+    <button id = "button" type="button" value="Show Table" onclick="myFunction(this);">Show Table</button>
+    <table border="1" id="myTable"></table>
+
+    <script>
+        function myFunction(x) {
+
+            x.style.display = 'none';
+            
+            document.getElementById("head").setAttribute("align", "center");
+            document.getElementById("myTable").setAttribute("align", "center");
+
+            var tbl = document.getElementById("myTable");
+            var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                var cell3 = row.insertCell();
+                var cell4 = row.insertCell();
+                var cell5 = row.insertCell();
+
+                cell1.innerHTML = "Name";
+                cell2.innerHTML = "Age";
+                cell3.innerHTML = "DOB";
+                cell4.innerHTML = "Email";
+                cell5.innerHTML = "Company";
+
+            for(let i=1; i<5; i++){
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                var cell3 = row.insertCell();
+                var cell4 = row.insertCell();
+                var cell5 = row.insertCell();
+                cell1.innerHTML = "Sudhakar";
+                cell2.innerHTML = "22";
+                cell3.innerHTML = "07-Oct-1999";
+                cell4.innerHTML = "sudhakarsonkar007@gmail.com";
+                cell5.innerHTML = "Gemini Solutions";
+            }
+        }
+    </script>
+</body>
+</html>
